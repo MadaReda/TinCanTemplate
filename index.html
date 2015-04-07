@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Untitled Document</title>
@@ -10,9 +11,29 @@
     <script type="application/javascript" src="js/tincan-min.js"></script>
     <script type="application/javascript" src="js/script.js"></script>
 </head>
+
 <body>
+    <!--This part to display a log in pop up-->
+    <div id="dialog-form" title="Create new user">
+        <p class="validateTips">All form fields are required.</p>
 
+        <form>
+            <fieldset>
+                <label for="name">Name</label>
+                <div contenteditable="true" name="name" id="name" class="text ui-widget-content ui-corner-all"></div>
+                <label for="email">Email</label>
+                <div contenteditable="true" name="email" id="email" class="text ui-widget-content ui-corner-all"></div>
+                <label for="password">Password</label>
+                <div contenteditable="true" name="password" id="password" class="text ui-widget-content ui-corner-all"></div>
 
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+    </div>
+    <button id="create-user">Create new user</button>
+    <button id="sendbutton" onclick="tincanfun('activityid')">Send</button>
 
 </body>
+
 </html>
