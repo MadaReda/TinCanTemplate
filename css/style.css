@@ -44,3 +44,8 @@ div#users-contain table th {
 .ui-dialog-titlebar-close {
     visibility: hidden;
 }
+
+#password{
+-webkit-text-security:disc;    
+   
+}

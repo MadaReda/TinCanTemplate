@@ -1,7 +1,9 @@
+ var usr, mail, pass;
+
 $(function() {
 
 
-    var usr, mail, pass
+   
         //----This part to validate the inputs of the user
     var dialog, form,
 
@@ -69,7 +71,7 @@ $(function() {
 
             usr = name.html();
             mail = email.html();
-            //pass = password.html();
+            pass = password.html();
 
             localStorage.setItem("usr", usr);
             localStorage.setItem("mail", mail);
@@ -133,8 +135,12 @@ $(function() {
         alert("offline");
     }
 
-    function tincanfun(activityid) {
-        activityid = "www.learnmix.com/" + activityid;
+    
+
+});
+
+function tincanfun(activityid) {
+        activityid = "mailto:http://www.learnmix.com/" + activityid;
         var tincan = new TinCan({
             recordStores: [{
                 endpoint: "https://cloud.scorm.com/tc/BOOOCQR3M7/",
@@ -155,5 +161,3 @@ $(function() {
             }
         });
     }
-
-});
